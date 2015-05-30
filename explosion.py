@@ -17,7 +17,7 @@ class Explosion(pygame.sprite.Sprite):
     def __init__(self, x, y):
         super(Explosion, self).__init__()
         Explosion.explosions.add(self)
-        self.sheet = Spritesheet("exp.png", 4, 4)
+        self.sheet = Spritesheet("data\exp.png", 4, 4)
         self.images = self.sheet.sprites
         self.widthheight = 62.5
         self.index = 0
