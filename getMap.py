@@ -5,7 +5,7 @@ def char_range(c1, c2):
     for c in xrange(ord(c1), ord(c2)):
         yield chr(c)
 
-f = open("date.txt", "w")
+f = open("matrix.txt", "w")
 
 if len(sys.argv) == 2:
     filename = sys.argv[1]
