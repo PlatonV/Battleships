@@ -14,7 +14,7 @@ if len(sys.argv) == 2:
 for i in range(1, 11):
     for j in char_range('A', 'K'):
         print("Requesting: " + str(j) + str(i))
-        url = "http://battleship.pitechplus.com/game/shoot/team{teamId}?coordinates=" + str(j) + str(i) 
+        url = "http://battleship.pitechplus.com/game/shoot/team9321?coordinates=" + str(j) + str(i) 
         conn = urllib2.urlopen(url)
         
         response = conn.read(100)
