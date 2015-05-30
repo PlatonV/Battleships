@@ -3,7 +3,7 @@ import request
 import pygame
 from pygame.locals import *
 import startNewGame
-
+import startNewMap
 pygame.init()
 
 screen = pygame.display.set_mode((800, 600))
@@ -12,7 +12,7 @@ lovit=[]
 startNewGame.startNewGame(1)
 xoy=[(0,-1),(1,0),(0,1),(-1,0)]
 
-
+startNewMap.startNewMap(2)
 def hit(x, y):
     pygame.draw.rect(screen, (255, 0, 0), Rect(x*26, y*26, 25, 25)) 
     pygame.display.update()
