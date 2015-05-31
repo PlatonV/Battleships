@@ -9,7 +9,8 @@ pygame.init()
 screen = pygame.display.set_mode((800, 600))
 
 xoy=[(0,-1),(1,0),(0,1),(-1,0)]
-startNewGame.startNewGame(1)
+
+startNewMap.startNewMap(1)
 
 def hit(y,x):
     pygame.draw.rect(screen, (255, 0, 0), Rect(x*60, y*40, 55, 35)) 
@@ -76,7 +77,7 @@ def solve():
         x = randint(1, 10)
         y = randint(1, 10)
 
-        if ((x, y) not in lovit) and ( ok(x,y) ) :
+        if ((x, y) not in lovit) and ( ok(x,y) ):
             c+=1
             m=1
             aux=[]
@@ -105,9 +106,10 @@ while running:
     for event in pygame.event.get():
         if event.type == QUIT:
             running = False
-    solve()
-    startNewMap.startNewMap(1)
+
     screen.fill((0,0,0))
     solve()
-    running = False
+    if startNewMap.startNewMap(1) == 'GAME_OVER':
+        running = False
+        break
 
